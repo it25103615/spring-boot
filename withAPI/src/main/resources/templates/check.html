@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Form</h1>
+<form id="userForm">
+    <label>Name:</label>
+    <input type="text" name="name" required><br><br>
+    <label>password:</label>
+    <input type="password" name="password" required><br>
+    <button type="submit">Submit</button>
+</form>
+<SCRIPT>
+    document.getElementById("userForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+    document.getElementById("userForm")
+    const formData ={
+        name: document.getElementById("name").value.trim(),
+        pw: document.getElementById("password").value.trim()
+    }
+    fetch("/userForm",
+        {method: "POST",body: JSON.stringify(formData))}
+</SCRIPT>
+
+</body>
+</html>

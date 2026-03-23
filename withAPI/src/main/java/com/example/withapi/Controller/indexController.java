@@ -18,9 +18,10 @@ public class indexController{
         model.addAttribute("pw",wel);*/
         return "check";
     }
+
     @PostMapping("/userForm")
     public String SubmitShowfrontHtml(@RequestBody welcome wel, Model model){
-        model.addAttribute(wel);
+        model.addAttribute("wel", wel);
         return "secondpg";
     }
 

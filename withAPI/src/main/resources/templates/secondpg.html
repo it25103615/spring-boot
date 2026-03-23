@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html  xmlns:th="http://www.thymeleaf.org" lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>next</title>
-</head>
-<body>
-<h1>sucess</h1>
-<p th.text="${wel.name}"/>  <br>
-<p th.text="${wel.pw}" />  <br>
-</body>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>next</title>
+    </head>
+
+    <body>
+        <h1>Success</h1>
+        <p th:text="'Username: ' + ${wel.name}"></p>
+        <p th:text="'Password: ' + ${wel.pw}"></p>
+    </body>
 </html>
